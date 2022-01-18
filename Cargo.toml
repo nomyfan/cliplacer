@@ -1,0 +1,16 @@
+[package]
+name = "cliplacer"
+version = "0.1.0"
+authors = ["nomyfan <Nomyfan@live.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+windows = { version = "0.30.0", features = [
+  "Win32_Foundation", 
+  "Win32_UI_WindowsAndMessaging", 
+  "Win32_UI_Input_KeyboardAndMouse",
+  "Win32_System_DataExchange",
+  "Win32_System_Memory"
+] }
