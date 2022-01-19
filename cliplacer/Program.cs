@@ -32,16 +32,15 @@ namespace cliplacer
             }
 
             Console.WriteLine("Register Ctrl+Alt+C successfully");
-            
-            MSG msg;
-            while (GetMessage(out msg, IntPtr.Zero, 0, 0) != 0)
+
+            while (GetMessage(out var msg, IntPtr.Zero, 0, 0) != 0)
             {
                 if (msg.message != WM_HOTKEY)
                     continue;
 
-                if (!Clipboard.ContainsText()) 
+                if (!Clipboard.ContainsText())
                     continue;
-                
+
                 var newContent = Clipboard.GetText().Replace(Environment.NewLine, "");
                 Console.WriteLine($"New content: {newContent}");
                 Clipboard.SetText(newContent);
