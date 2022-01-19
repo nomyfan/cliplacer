@@ -20,7 +20,7 @@ namespace cliplacer
         private static readonly uint WM_HOTKEY = 0x0312;
         private static readonly uint MOD_ALT = 0x0001;
         private static readonly uint MOD_CTRL = 0x0002;
-        private static readonly uint MOD_NOREPEAT = 16384;
+        private static readonly uint MOD_NOREPEAT = 0x4000;
         private static readonly uint VK_C = 0x43;
 
         [STAThread]
